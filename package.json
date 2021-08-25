@@ -1,0 +1,26 @@
+{
+  "name": "final_entrega03",
+  "version": "1.0.0",
+  "description": "Trabajo final con SASS",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss estilos/main.scss styles/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epsequiel/coderhouseweb.git"
+  },
+  "author": "Ezequiel Meinero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epsequiel/coderhouseweb/issues"
+  },
+  "homepage": "https://github.com/epsequiel/coderhouseweb#readme"
+}

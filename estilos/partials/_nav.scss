@@ -1,0 +1,28 @@
+
+.nav {}
+
+.nav__lista {
+    list-style: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0.2rem 0 0.5rem 0.5rem;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.nav__item {
+    color:rgb(107, 107, 107);
+    padding: 0.25rem 0.75rem 0.25rem 0;
+    display: inline-block;
+    background-color: #685291;
+}
+
+.nav__link {
+    margin-left: 0.5rem;
+    /*text-decoration: none; */
+}
+
+.nav__item:hover {
+    /* efecto sobre los items del menu cuando pasamos por arriba */
+    background-color: darkslateblue;
+    cursor: pointer;
+}

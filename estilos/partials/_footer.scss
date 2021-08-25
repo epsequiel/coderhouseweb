@@ -1,0 +1,106 @@
+.footer {
+    color:white;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    height: 400px;
+    align-content: center;
+    width: 100%;
+    
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    &__h2 {
+        background-color: black;
+        padding: 20px 5px;
+    }
+    &__h3 {                              // anidacion SASS
+        color:$color-secondary;
+        background-color:$color-primary;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    &__p, &__a {
+        font-size: 1.1rem;
+    }
+    &__mapa {
+        padding-right: 0.5rem;
+        margin: 1rem;
+        padding-bottom: 1rem;
+        max-height: max-content;
+        box-sizing: content-box;
+        width: 500px;
+    }
+}
+
+
+.socialContainer {
+    margin: 3rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    h3 {                              // anidacion SASS
+        color:$color-secondary;
+        background-color:$color-primary;
+        font-weight: 700;
+        text-decoration: none;
+    }
+}
+
+
+/* BEM para los socials */
+.social {                   // cada linea donde esta una red
+    color:$color-secondary;
+    &__item {             // esto es el container que tiene un logo y el texto
+        width: 13rem;
+        height: 2rem;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {     // logo de la red social
+        width: 24px;
+        height: auto;
+        margin: 0 0.5rem;
+    }
+    &__text {     // el texto que mostramos
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.4rem;
+    }
+    &__link {     // el link a la red social
+        color: $color-secondary;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    &__link--active {     // el link a la red social
+        color:gray;
+        text-decoration: none;
+        cursor: pointer;
+    }
+   
+}
+
+
+
+
+
+
+.social__link:hover {     // el link a la red social
+    color:gray;
+    background-color: rgba(100,100,100,0.1);
+    border: 1px solid rgb(19, 19, 59);
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* FIN BEM SOCIALES */ 
+
+
+iframe#mapa {
+    width: 80%; 
+    height: 80%;
+    border:0;
+    padding: 0.2rem;
+}
+ 

@@ -1,0 +1,40 @@
+/* Valor pequeñó: CEL */
+@media only screen and (max-width: 480px) {
+	/*#grillaIndex {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+        grid-template-areas:
+            "header header"
+            "main main"
+            "main main"
+            "asideSuperior asideInferior"
+            "productos productos"
+            " footer footer";
+    }*/
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+
+ /* Valor medio: TABLET */
+ @media only screen and (max-width: 768px) {
+	/*#grillaIndex {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto; 
+        grid-template-areas:
+            "header header"
+            "main main"
+            "main main"
+            "asideSuperior asideInferior"
+            "productos productos"
+            " footer footer";
+    }*/
+    h2 {
+        font-size: 1rem;
+    }
+    iframe {
+        width: 75%;
+        height: auto;
+    }
+}

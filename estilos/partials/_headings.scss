@@ -1,0 +1,41 @@
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* quiero otra fuente para el titulo */
+    font-weight: 900;
+    font-size: 3rem;
+    color:rgb(230, 230, 230);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    /*margin: 25px;*/
+    line-height: 4rem;
+}
+
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: rgb(129, 166, 201);
+    margin: 0.25rem 1rem 1rem 0.25rem;
+    padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+    text-transform: uppercase;
+    border-top: 2px solid rgb(11, 11, 31);
+    border-left: 2px solid rgb(11,11,31);
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color:rgb(155, 253, 160);
+    background-color: rgb(75, 73, 139);
+    padding: 5px;
+    text-transform: capitalize;
+    text-decoration: underline overline green;
+}
+
+
+h4 {
+    box-sizing: border-box;
+}
