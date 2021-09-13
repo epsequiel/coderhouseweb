@@ -9,9 +9,8 @@
     "nodemon": "^2.0.12"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss estilos/main.scss styles/main.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "watch-css": "nodemon -e scss -x npm run build-css"
   },
   "repository": {
     "type": "git",
