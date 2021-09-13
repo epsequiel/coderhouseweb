@@ -1,106 +1,59 @@
 .footer {
-    color:white;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    height: 400px;
-    align-content: center;
+    position: relative;
+    height: 250px;
     width: 100%;
+    background-color:var(--clr-neutral-0);
     
-    &__container {
+    &__content {
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: row;
+        justify-content: space-around;
+
+        & > img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    &__title {
+        font-size: clamp(1.5rem,50%,2rem);
+        color: var(--clr-neutral-900);
+    }
+    &__text {
+        font-size: clamp(1rem,50%,1.2rem);
+        color:var(--clr-neutral-600);
+    }
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        width: clamp(40ch, 50%, 75ch);
         justify-content: space-between;
+        color: var(--clr-neutral-700);
+        font-size: 1.5rem;
+
+        &list {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
-    &__h2 {
-        background-color: black;
-        padding: 20px 5px;
-    }
-    &__h3 {                              // anidacion SASS
-        color:$color-secondary;
-        background-color:$color-primary;
-        font-weight: 700;
-        text-decoration: none;
-    }
-    &__p, &__a {
-        font-size: 1.1rem;
-    }
+
     &__mapa {
-        padding-right: 0.5rem;
-        margin: 1rem;
-        padding-bottom: 1rem;
-        max-height: max-content;
-        box-sizing: content-box;
-        width: 500px;
+        width: 80%;
+        height: 80%;
+    }
+    &__copyright {
+        color: var(--clr-neutral-900);
+        background-color: black;
+
+        & > span {
+            color: var(--clr-secondary-400);
+        }
+
+        & > a {
+            text-decoration: none;
+            color: var(--clr-primary-200);
+        }
     }
 }
-
-
-.socialContainer {
-    margin: 3rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    h3 {                              // anidacion SASS
-        color:$color-secondary;
-        background-color:$color-primary;
-        font-weight: 700;
-        text-decoration: none;
-    }
-}
-
-
-/* BEM para los socials */
-.social {                   // cada linea donde esta una red
-    color:$color-secondary;
-    &__item {             // esto es el container que tiene un logo y el texto
-        width: 13rem;
-        height: 2rem;
-        display: flex;
-        flex-flow: row-reverse nowrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__logo {     // logo de la red social
-        width: 24px;
-        height: auto;
-        margin: 0 0.5rem;
-    }
-    &__text {     // el texto que mostramos
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.4rem;
-    }
-    &__link {     // el link a la red social
-        color: $color-secondary;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    &__link--active {     // el link a la red social
-        color:gray;
-        text-decoration: none;
-        cursor: pointer;
-    }
-   
-}
-
-
-
-
-
-
-.social__link:hover {     // el link a la red social
-    color:gray;
-    background-color: rgba(100,100,100,0.1);
-    border: 1px solid rgb(19, 19, 59);
-    border-radius: 5px;
-    cursor: pointer;
-}
-/* FIN BEM SOCIALES */ 
-
-
-iframe#mapa {
-    width: 80%; 
-    height: 80%;
-    border:0;
-    padding: 0.2rem;
-}
- 
