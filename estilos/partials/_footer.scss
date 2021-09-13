@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     background-color:var(--clr-neutral-0);
-    
+
     &__content {
         display: flex;
         flex-direction: row;
@@ -10,24 +10,31 @@
         flex-wrap: wrap;
     }
     &__logo > img {
-        margin-top: 3rem;
+        position: absolute;
+        //margin-top: 3rem;
+        bottom: 50%;
         height: 35%;
         fill: none;
+        filter: grayscale(100%);
     }
 
     &__title {
         font-size: clamp(1.5rem,50%,2rem);
         color: var(--clr-neutral-900);
-        padding-top: 3rem;
+        padding: 3rem 0 2rem;
     }
     &__text {
         font-size: clamp(0.8rem,50%,1.0rem);
         color:var(--clr-neutral-600);
         width: clamp(30ch,50%,50ch);
+        line-height: 1.2rem;
+        padding-bottom: 2rem;
+
     }
 
     &__subscribe {
         position: relative;
+        padding: 1rem 0 3rem;
         & > input {
             border: 1px solid var(--clr-secondary-400);
             border-right: none;
@@ -39,11 +46,22 @@
             color: var(--clr-neutral-700);
             font-size: 0.6em;
             background-color: var(--clr-neutral-100);
-            padding: auto 3rem;
-
+            padding: 0 2rem;
         }
 
-        
+        &:focus-within input
+        {
+            outline: none;
+            border: 1px solid var(--clr-secondary-600);
+            border-right: none;
+            // box-shadow: 0 0 0 3px black,
+            //     0 0 0 6px var(--clr-secondary-400);
+            border-right: none;
+            //background-color: var(--clr-neutral-400);
+        }
+        &:focus-within .footer__subscribebtn {
+            background-color:var(--clr-secondary-600);
+        }
     }
     &__subscribebtn {
         position: absolute;
@@ -82,7 +100,8 @@
         transition: color 200ms ease-in-out;
     }
     
-    &__sociallink:hover {
+    &__sociallink:hover,
+    &__sociallink:focus, {
         -webkit-animation: rotate-center 0.6s ease-in-out both;
                 animation: rotate-center 0.6s ease-in-out both;
         color: var(--clr-secondary-400);

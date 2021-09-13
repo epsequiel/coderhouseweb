@@ -32,20 +32,22 @@
 }
 
 .hero__img {
-    width: 50%;
+    width: 55%;
     height: fit-content;
+    display: inline;
     // contain: content;
     flex-grow: 50%;
     flex-basis: 10%;
     // background-blend-mode:darken;
     filter: grayscale(100%);
+    opacity:60%;
 
 }
 
 .hero__title {
-    display: inline-block;
-    align-self: center;
     position: relative;
+    display: inline-block;
+    align-self: left;
     font-family: 'Audiowide',sans-serif;
     font-size: 3.5rem;
     letter-spacing: 0.35rem;
@@ -93,19 +95,27 @@
 }
 
 .hero__text {
-    color: var(--clr-neutral-400);
+    width: clamp(45ch, 50%, 70ch);
+    text-align: left;
+    color: var(--clr-neutral-900);
+    background-color:transparent;
+    backdrop-filter: blur(10px);
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 1.4rem;
     word-spacing: 0.04rem;
-    width: 70%;
-    margin: 3.5rem 1.5rem 1.5rem;
-    outline: 2px solid var(--clr-secondary-400);
+    //width: 70%;
+    border-radius: 10px;
+    border: 1px solid var(--clr-secondary-400);
+    margin: 3.5rem 5rem 1.5rem;
+    padding:2rem;
 }
 
 // CTA = Call To Action btn
 .hero__cta {
-    position: relative;
+    //position: absolute;
+    //bottom: 10rem;
+    //right: 15rem;
     display: block;
     //height: 2rem;
     width: fit-content;
@@ -115,6 +125,7 @@
     //text-transform: uppercase;
     padding: 0.8rem 4rem;
     margin: 2rem;
+
     border: 2px solid black;
     border-radius: 5px;
     background-image: linear-gradient(90deg, rgba(45,105,218,1) 0%, rgba(17,170,37,1) 50%, rgba(255,142,43,1) 100%);
