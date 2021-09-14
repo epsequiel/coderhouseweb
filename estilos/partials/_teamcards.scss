@@ -1,0 +1,190 @@
+.teamcard__section {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: var(--clr-neutral-100);
+    gap:2rem;
+}
+
+.teamcard {
+    max-height: 65vh;
+    max-width: 50vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-100);
+    border:1px solid var(--clr-secondary-400);
+    border-radius: 10px;
+    box-shadow: 0 0 50px 0px black;
+    padding: 2rem 0 2rem;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 50%;
+        width: 100%;
+        background-color: var(--clr-neutral-400);
+        background-image: linear-gradient(180deg, var(--clr-neutral-100), var(--clr-neutral-400));
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+    &__imgcontainer  {
+      max-height: 50%;
+      transition: border 200ms ease-in-out;
+      z-index: 10;
+    }
+    &__img {
+      height: 90%;
+      width: 90%;
+      object-fit: cover;
+    }
+    &__body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+    &__name {
+      position: relative;
+      font-family: 'Russo One','Bebas Neue',sans-serif;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: clamp(1.7rem, 50%, 2.3rem) ;
+      margin: 1rem 0.5rem 0;
+      color: var(--clr-neutral-900);
+    }
+    &__nameshadow {
+      position: absolute;
+      top: 0.3em;
+      left: 0;
+      font-family: 'Russo One', sans-serif;
+      font-size: 2.5rem;
+      color: var(--clr-neutral-200);
+      opacity: 0.15;
+    }
+    
+    &__bio {
+      color: var(--clr-neutral-700);
+      font-size: clamp(1rem, 50%, 1.5rem);
+      letter-spacing: 0.035em;
+      word-spacing: 0.05em;
+      margin: 1rem 0.5rem;
+    }
+    /*
+     * este es el div que contiene la lista
+     */
+    &__social { 
+      // display: flex;
+      // flex-direction: row;
+      // justify-content: space-around;
+      // margin-left: 2rem;
+      transform: translateX(-100%);
+      transition: transform 500ms ease-in-out 150ms;
+    }
+
+    &:hover &__social,
+    &:focus-within &__social {
+      transform: translateX(0);
+      transform-origin: left;
+    }
+    
+    &:focus-within &__imgcontainer, 
+    &:hover &__imgcontainer {
+      border: 0.35em solid var(--clr-secondary-400);
+    }
+    
+    
+    
+    &__sociallist {
+      // 
+      height: 2.5rem;
+      font-size: 1.8rem;
+      list-style:none;
+    }
+    &__li {
+      margin: 0;
+      display: inline;
+      // margin-top: 1.5em;
+      // margin-left: 1.2em;
+      // font-size: 1.5em;
+    }
+    &__sociallink {
+        display: inline-block;
+        color: var(--clr-neutral-700);
+        margin-left: 1.5rem;
+    }
+    &__sociallink:focus,
+    &__sociallink:hover {
+        position: relative;
+      color: var(--clr-secondary-400);
+      -webkit-animation: rotate-center 0.6s ease-in-out both;
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+    &__sociallink--lincolor {
+      color: #0077b5;
+    }
+    &__sociallink--fbcolor {
+      color: 	#4267B2;
+    }
+  }
+  
+  @media  screen and (min-width: 400px) {
+    .teamcard {
+      width: 60vw;
+      flex-direction: column;
+      align-content: center;
+      height: fit-content;
+      padding-bottom: 2rem;
+      padding: 0;
+      &__imgcontainer {
+        width: 60%;
+        height: auto;
+      }
+      &__sociallist {
+        //font-size: 1em
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: end;
+        height: 3rem;
+        // padding: 0 3rem 0 3rem;
+      }
+    }
+  }
+  
+  @media  screen and (min-width: 800px) {
+    .teamcard {
+      width: 100vw;
+      font-size: 24px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      height: fit-content;
+      //padding-bottom: 2rem;
+      &__imgcontainer {
+        width: 30vw;
+        height: auto;
+      }
+      &__bio {
+          padding-top: 3rem;
+      }
+
+      &__sociallist {
+        //font-size: 1em
+        padding: 0 3rem 0 3rem;
+      }
+    }
+  }
+  
